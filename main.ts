@@ -19,6 +19,8 @@ function createWindow(): BrowserWindow {
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: serve ? true : false,
+      //https://github.com/electron/electron/issues/5107
+      webSecurity: false,
     },
   });
 
