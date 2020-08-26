@@ -2,11 +2,12 @@
   "name": "electron-ng-zorro-boilerplate",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve && npm run main:transpile:dev && npx electron . --serve",
-    "ng:build": "ng build --base-href ./",
+    "start": "concurrently -c \"yellow.bold,green.bold\" -n \"NG,ELECTRON\" \"ng serve\" \"npm run electron:serve\"",
+    "electron:serve": "wait-on tcp:4200 && npm run main:transpile:dev && npx electron . --serve",
     "main:transpile:dev": "tsc -p tsconfig-electron.dev.json",
     "main:transpile:prod": "tsc -p tsconfig-electron.prod.json",
     "electron:build": "npm run ng:build -- --prod && npm run main:transpile:prod && electron-builder build",
+    "ng:build": "ng build --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -34,6 +35,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "concurrently": "^5.3.0",
     "electron": "^10.0.0",
     "electron-builder": "^22.8.0",
     "electron-reload": "^1.5.0",
