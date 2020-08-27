@@ -1,5 +1,5 @@
 {
-  "name": "electron-ng-zorro-boilerplate",
+  "name": "electron-ng-zorro-antd-boilerplate",
   "version": "0.0.0",
   "scripts": {
     "start": "concurrently -c \"yellow.bold,green.bold\" -n \"NG,ELECTRON\" \"ng serve\" \"npm run electron:serve\"",

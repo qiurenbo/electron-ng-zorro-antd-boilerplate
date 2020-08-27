@@ -5,12 +5,8 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent],
     }).compileComponents();
   }));
 
@@ -20,16 +16,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'electron-ng-zorro-boilerplate'`, () => {
+  it(`should have as title 'electron-ng-zorro-antd-boilerplate'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('electron-ng-zorro-boilerplate');
+    expect(app.title).toEqual('electron-ng-zorro-antd-boilerplate');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('electron-ng-zorro-boilerplate app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain(
+      'electron-ng-zorro-antd-boilerplate app is running!'
+    );
   });
 });
