@@ -21,6 +21,7 @@ nz-breadcrumb {
 .inner-layout {
   padding: 24px 0;
   background: #fff;
+  height: calc(100% - 134px);
 }
 
 .sider-menu {
@@ -34,4 +35,8 @@ nz-breadcrumb {
 
 nz-footer {
   text-align: center;
+}
+
+.out-layout {
+  height: 100%;
 }
